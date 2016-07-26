@@ -60,9 +60,11 @@ on run args
             write text "vim " & filename & " " & num
           end if
         end tell
-        tell oldTab
-          select
-        end tell
+        (*
+         * tell oldTab
+         *   select
+         * end tell
+         *)
       end tell
     end tell
   end if
