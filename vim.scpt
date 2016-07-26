@@ -70,23 +70,23 @@ on run args
 end run
 
 on replace_chars(this_text, search_string, replacement_string)
- set AppleScript's text item delimiters to the search_string
- set the item_list to every text item of this_text
- set AppleScript's text item delimiters to the replacement_string
- set this_text to the item_list as string
- set AppleScript's text item delimiters to ""
- return this_text
+  set AppleScript's text item delimiters to the search_string
+  set the item_list to every text item of this_text
+  set AppleScript's text item delimiters to the replacement_string
+  set this_text to the item_list as string
+  set AppleScript's text item delimiters to ""
+  return this_text
 end replace_chars
 
 on theSplit(theString, theDelimiter)
-	-- save delimiters to restore old settings
-	set oldDelimiters to AppleScript's text item delimiters
-	-- set delimiters to delimiter to be used
-	set AppleScript's text item delimiters to theDelimiter
-	-- create the array
-	set theArray to every text item of theString
-	-- restore the old setting
-	set AppleScript's text item delimiters to oldDelimiters
-	-- return the result
-	return theArray
+  -- save delimiters to restore old settings
+  set oldDelimiters to AppleScript's text item delimiters
+  -- set delimiters to delimiter to be used
+  set AppleScript's text item delimiters to theDelimiter
+  -- create the array
+  set theArray to every text item of theString
+  -- restore the old setting
+  set AppleScript's text item delimiters to oldDelimiters
+  -- return the result
+  return theArray
 end theSplit
