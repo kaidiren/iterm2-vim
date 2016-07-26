@@ -1,4 +1,3 @@
-#osascript ~/.iterm2/scripts/vim.scpt @@\1 @@\2
 on run args
   if (count of args) > 0 then
     tell application "System Events"
